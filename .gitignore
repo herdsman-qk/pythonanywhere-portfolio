@@ -1,0 +1,64 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+# Virtual environment
+venv/
+env/
+*.env
+
+# Django stuff:
+
+# Django migrations
+*/migrations/__pycache__/
+*/migrations/*.pyc
+*/migrations/*.pyo
+*/migrations/*.pyd
+# Secrets
+.env
+*.pem
+
+# Logs and local debug files
+logs/
+*.log
+*.pot
+*.pid
+*.seed
+*.manifest
+*.cover
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Node and frontend dependencies (if applicable)
+node_modules/
+npm-debug.log
+yarn-debug.log
+yarn-error.log
+
+# Compiled files
+*.mo
+*.pyc
+*.pyo
+
+# Cache and temp files
+*.cache
+*.DS_Store
+*.bak
+Thumbs.db
+
+# Coverage reports
+htmlcov/
+.coverage
+.tox/
+.nox/
+.pytest_cache/
+__pycache__/
+.coverage.*
+nosetests.xml
+coverage.xml
+*.cover
+.hypothesis/
