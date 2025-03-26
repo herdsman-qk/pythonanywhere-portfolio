@@ -126,7 +126,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 MEDIA_URL = '/media/'
 
 # Absolute filesystem path to the directory where media files are stored
-MEDIA_ROOT = BASE_DIR / 'media'
+MEDIA_ROOT = BASE_DIR / 'static'
 
 # The directory where static files will be collected for deployment
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
