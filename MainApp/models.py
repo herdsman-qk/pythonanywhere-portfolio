@@ -1,5 +1,4 @@
 from django.db import models
-from numpy.matlib import empty
 
 
 # Create your models here.
@@ -104,3 +103,14 @@ class MyMail(models.Model):
 
     def __str__(self):
         return '{} - {}'.format(self.from_name, self.subject)
+
+class AccessLog(models.Model):
+    ipaddress = models.CharField(max_length=100)
+    count = models.IntegerField()
+    date = models.DateTimeField(auto_now=True)
+
+    class Meta:
+        ordering = ['date']
+
+    def __str__(self):
+        return '{} - {}'.format(self.ipaddress, self.count)

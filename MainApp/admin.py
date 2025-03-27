@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Profile, Skill, Education, Experience, Project, ExperienceItem, MyMail
+from .models import Profile, Skill, Education, Experience, Project, ExperienceItem, MyMail, AccessLog
 
 
 # Custom Admin for Profile
@@ -46,6 +46,9 @@ class MyMailAdmin(admin.ModelAdmin):
     list_display = ('from_name', 'from_email', 'subject', 'message')
     search_fields = ('from_name', 'from_email', 'subject', 'message')
 
+class AccessLogAdmin(admin.ModelAdmin):
+    list_display = ('ipaddress', 'count', 'date')
+
 # Register the models
 admin.site.register(Profile, ProfileAdmin)
 admin.site.register(Skill, SkillAdmin)
@@ -54,3 +57,4 @@ admin.site.register(Experience, ExperienceAdmin)
 admin.site.register(Project, ProjectAdmin)
 admin.site.register(ExperienceItem, ExperienceItemAdmin)
 admin.site.register(MyMail, MyMailAdmin)
+admin.site.register(AccessLog, AccessLogAdmin)
